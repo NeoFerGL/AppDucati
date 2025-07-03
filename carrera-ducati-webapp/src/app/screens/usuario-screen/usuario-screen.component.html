@@ -1,0 +1,44 @@
+<mat-drawer-container>
+    <mat-drawer #drawer mode='over' position="start">
+        <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+    </mat-drawer>
+    <!-- Se coloca el header de las vistas -->
+    <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+
+    <!-- Colocamos la sección del body de toda la vista -->
+    <section class="perfil-container">
+        <div class="perfil-header">
+            <img src="/assets/images/escudo.jpg" alt="Ducati Logo" class="logo">
+            <h2>Mi Perfil</h2>
+        </div>
+    
+        <div class="perfil-card">
+            <img src="/assets/images/perfil.jpg" alt="Foto de perfil" class="perfil-foto">
+            <div class="perfil-info">
+                <h3>{{nombre}}</h3>
+                <p>Email: {{ userEmail }}</p>
+                <p>Miembro desde: {{fecha}}</p>
+            </div>
+        </div>
+    
+        <div class="perfil-detalles">
+            <div class="detalle-box">
+                <h4>Puntos Acumulados</h4>
+                <p>{{puntos}}</p>
+            </div>
+            <div class="detalle-box">
+                <h4>Moto Registrada</h4>
+                <p>Ducati Panigale V4</p>
+            </div>
+            <div class="detalle-box">
+                <h4>Eventos Asistidos</h4>
+                <p>5</p>
+            </div>
+        </div>
+    
+        <div class="perfil-botones">
+            <button class="btn-accion">Editar Perfil</button>
+            <button class="btn-logout" (click)="logout()">Cerrar Sesión</button>
+        </div>
+    </section>
+</mat-drawer-container>

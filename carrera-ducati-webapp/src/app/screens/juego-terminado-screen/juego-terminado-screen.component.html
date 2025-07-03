@@ -1,0 +1,48 @@
+<section class="politicas-privacidad">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <!-- Sección del body donde se muestra todo el contenido -->
+            <div class="body-home">
+                <!-- Sección del eslogan y contenido -->
+                <div class="section-eslogan">
+                    <div class="eslogan {{isMobile()}}">
+                        <div class="line-color">
+                            <div class="vertical-line" style="height: 111px;"></div>
+                        </div>
+                        <div class="title-link">
+                            <span>¡EXCELENTE CARRERA!</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Barra roja -->
+                <div style="display: flex; justify-content: center;">
+                    <div class="vertical-big"></div>
+                </div>
+                
+                <div class="contenedor-final">
+                    <span class="label-obtuviste">OBTUVISTE</span>
+                
+                    <h1 class="puntos">1400</h1>
+                    <p class="subtitulo">puntos</p>
+                
+                    <p class="mensaje-final">
+                        Gracias por participar, acumula más puntos y<br />
+                        gana una increíble <strong>Ducati Scrambler</strong>.
+                    </p>
+                
+                    <button class="btn-inicio" (click)="irInicio()">IR AL INICIO</button>
+                </div>
+
+                
+                <!-- Footer -->
+                <div class="footer">
+                    <app-footer-app></app-footer-app>
+                </div>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>

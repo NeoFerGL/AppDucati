@@ -1,0 +1,121 @@
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #111, #c00);
+    color: #fff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+
+    .logo {
+        width: 60px;
+        border-radius: 50px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.perfil-card {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 2rem;
+
+    .perfil-foto {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+
+    .perfil-info h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .perfil-info p {
+        margin: 5px 0;
+        color: #444;
+    }
+}
+
+.perfil-detalles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 2rem;
+
+    .detalle-box {
+        background-color: #222;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        text-align: center;
+        flex: 1;
+        min-width: 200px;
+
+        h4 {
+            font-size: 1rem;
+            color: #aaa;
+        }
+
+        p {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+}
+
+.perfil-botones {
+    display: flex;
+    gap: 1rem;
+
+    .btn-accion,
+    .btn-logout {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-accion {
+        background-color: #fff;
+        color: #c00;
+
+        &:hover {
+            background-color: #eee;
+        }
+    }
+
+    .btn-logout {
+        background-color: #c00;
+        color: #fff;
+
+        &:hover {
+            background-color: #900;
+        }
+    }
+}
